@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+    <h1 mat-dialog-title>Forgot Password</h1>
+</mat-toolbar>
+<div mat-dialog-content>
+    <mat-form-field>
+        <input matInput [(ngModel)]="username" placeholder="Username" />
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="">Cancel</button>
+    <button mat-raised-button color="primary" (click)="submit()">Send Request</button>
+</div>

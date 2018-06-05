@@ -1,0 +1,70 @@
+.container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 100px 0 0;
+    position: relative;
+}
+
+.processing mat-card {
+    filter: blur(2px);
+}
+.processing mat-progress-spinner {
+    display: block;
+}
+
+mat-card {
+    min-width: 360px;
+    max-width: 500px;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+button {
+    margin: 10px 0;
+    width: 100%;
+}
+
+.login-button {
+    padding: 25px 0 0;
+}
+.extra-buttons {
+    padding: 25px 0 0;
+}
+
+mat-progress-spinner {
+    display: none;
+    filter: blur(0);
+    left: calc(50% - 50px);
+    margin: 0;
+    position: absolute;
+    top: calc(50% - 50px);
+}
+
+/** Eula **/
+.mat-dialog-container {
+    padding: 0;
+}
+.mat-dialog-content {
+    margin: 0;
+    padding: 0;
+}
+.mat-dialog-title {
+    font-size: 1em;
+    font-weight: 400;
+}
+mat-form-field {
+    box-sizing: border-box;
+    padding: 25px;
+}
+
+.mat-dialog-container p {
+    font-size: 0.85em;
+    padding: 10px 25px;
+}
+.mat-dialog-container button {
+    margin: 0 25px;
+    max-width: 200px;
+}

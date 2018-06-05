@@ -1,0 +1,25 @@
+<div [class.processing]="processing" class="container">
+    <mat-card>
+        <form [formGroup]="loginForm" autocomplete="off">
+            
+            <mat-form-field>
+                <input (keyup)="validate()" matInput placeholder="Username" required formControlName="username" />
+            </mat-form-field>
+
+            <mat-form-field>
+                <input (keyup)="validate()" matInput type="password" placeholder="Password" required formControlName="password" />
+            </mat-form-field>
+
+            <div class="login-button">
+                <button (click)="signIn()" mat-raised-button color="primary" [disabled]="!valid">Login</button>
+            </div>
+
+            <div class="extra-buttons">
+                <button (click)="openForgot()" mat-button color="primary">Forgot Password</button>
+                <button (click)="openEula()" mat-button color="primary">End-User License Agreement</button>
+            </div>
+
+        </form>
+    </mat-card>
+    <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+</div>
