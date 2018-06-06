@@ -1,14 +1,16 @@
-<layout-header></layout-header>
+<div #wrapper class="kapios-theme--light">
+    <layout-header (currentTheme)="changeTheme($event)"></layout-header>
 
-<mat-sidenav-container>
-    <mat-sidenav mode="side" [opened]="isAuthenticated()">
-        <layout-side></layout-side>
-    </mat-sidenav>
-    <mat-sidenav-content>
+    <mat-sidenav-container>
+        <mat-sidenav mode="side" [opened]="isAuthenticated()">
+            <layout-side></layout-side>
+        </mat-sidenav>
+        <mat-sidenav-content>
 
-        <router-outlet></router-outlet>
+            <router-outlet></router-outlet>
 
-        <layout-footer [hidden]="!isAuthenticated()"></layout-footer>
+            <layout-footer [hidden]="!isAuthenticated()"></layout-footer>
 
-    </mat-sidenav-content>
-</mat-sidenav-container>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

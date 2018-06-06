@@ -10,5 +10,12 @@
     </mat-menu>
 
     <div class="toolbar-spacer"></div>
+    <div #themer class="toolbar-themer toolbar-themer--light">
+        <button mat-fab [matMenuTriggerFor]="themes"></button>
+        <mat-menu #themes="matMenu" direction="down">
+            <button mat-fab class="toolbar-themer--menu-light" (click)="setTheme(0)"></button>
+            <button mat-fab class="toolbar-themer--menu-dark" (click)="setTheme(1)"></button>
+        </mat-menu>
+    </div>
     <div class="toolbar-logo"></div>
 </mat-toolbar>

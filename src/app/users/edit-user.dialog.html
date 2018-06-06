@@ -17,7 +17,7 @@
     <mat-checkbox (click)="togglePassword()">Password Reset?</mat-checkbox>
     <mat-checkbox [checked]="data.user.active">Active</mat-checkbox>
 
-    <div [hidden]="!showPassword">
+    <div class="edit-user--password" [hidden]="!showPassword">
         <mat-form-field>
             <input matInput type="password" placeholder="Password" />
         </mat-form-field>

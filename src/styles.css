@@ -50,3 +50,84 @@ ul {
     font: normal 300 1em/35px Montserrat, "Helvetica Neue", sans-serif;
     outline: none;
 }
+
+.toolbar-title {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 15px 0 0;
+}
+.toolbar-year {
+}
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+.toolbar-logo {
+    background: url('/assets/kapios/bug_reverse.png') no-repeat center;
+    background-size: 40px 40px;
+    height: 100%;
+    width: 50px;
+}
+.toolbar-year {
+    width: 75px;
+}
+.toolbar-themer {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0 25px 0 0;
+}
+.toolbar-themer button.mat-fab {
+    height: 30px !important;
+    width: 30px !important;
+}
+.toolbar-themer--light button,
+.toolbar-themer--menu-light.mat-fab {
+    background: #f4f4f4 !important;
+}
+.toolbar-themer--dark button,
+.toolbar-themer--menu-dark.mat-fab {
+    background: #343434 !important;
+}
+
+
+.kapios-theme--light .side-user {
+    background: #f4f4f4;
+}
+.kapios-theme--dark .side-user {
+    background: #525252;
+}
+
+.side-user mat-list-item,
+.side-menu mat-list-item {
+    font-size: 0.85em !important;
+    height: 40px;
+}
+.side-menu mat-list-item {
+    border-radius: 1px;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+.kapios-theme--light .side-menu mat-list-item:hover {
+    background: #e4e4e4;
+}
+.kapios-theme--dark .side-menu mat-list-item:hover {
+    background: #626262;
+}
+
+.side-user mat-icon,
+.side-menu mat-icon {
+    font-size: 1.5em;
+}
+
+.footer {
+    background: #d4d4d4;
+    font-size: 0.85em;
+    line-height: 40px;
+    text-align: center;
+}
+.kapios-theme--light .footer {
+    background: #d4d4d4;
+}
+.kapios-theme--dark .footer {
+    background: #4f4f4f;
+}
