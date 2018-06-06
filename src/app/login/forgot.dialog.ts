@@ -12,4 +12,8 @@ export class ForgotDialog {
         public dialogRef: MatDialogRef<ForgotDialog>,
         @Inject(MAT_DIALOG_DATA) public data: any
     ) {}
+
+    submit(): void {
+
+    }
 }

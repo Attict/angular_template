@@ -55,7 +55,7 @@ mat-progress-spinner {
     font-size: 1em;
     font-weight: 400;
 }
-mat-form-field {
+.mat-dialog-container mat-form-field {
     box-sizing: border-box;
     padding: 25px;
 }

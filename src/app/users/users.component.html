@@ -1,0 +1,64 @@
+
+
+<div class="users">
+    <div class="users-filter">
+        <mat-form-field>
+            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        </mat-form-field>
+    </div>
+
+    <mat-table [dataSource]="dataSource" matSort>
+
+        <!-- ID Column -->
+        <ng-container matColumnDef="username">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Username </mat-header-cell>
+            <mat-cell *matCellDef="let row">
+                {{ row.username }}
+            </mat-cell>
+        </ng-container>
+
+        <!-- Progress Column -->
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+            <mat-cell *matCellDef="let row">
+                {{ row.name }}
+            </mat-cell>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="group">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Group </mat-header-cell>
+            <mat-cell *matCellDef="let row">
+                {{ row.group }}
+            </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="lastOnline">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Last Online </mat-header-cell>
+            <mat-cell *matCellDef="let row">
+                {{ row.lastOnline }}
+            </mat-cell>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="options">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let row">
+                <mat-icon>edit</mat-icon>
+                <mat-icon color="warn">delete</mat-icon>
+            </mat-cell>
+        </ng-container>
+
+        <!-- Author -->
+
+        <!-- Created -->
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="editUser()">
+        </mat-row>
+
+    </mat-table>
+
+    <!-- Paginator -->
+    <mat-paginator [pageSizeOptions]="[10, 25, 100]"></mat-paginator>
+</div>

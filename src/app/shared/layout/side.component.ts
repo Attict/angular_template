@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'layout-side',
@@ -6,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./layout.css']
 })
 export class SideComponent implements OnInit {
-    constructor() {}
+    constructor(
+        public router: Router
+    ) {}
+
     ngOnInit() {}
+
+    goTo(url: String): void {
+        this.router.navigate([url]);    
+    }
 }

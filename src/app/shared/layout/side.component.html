@@ -21,22 +21,22 @@
 </mat-list>
 
 <mat-list class="side-menu">
-    <mat-list-item>
+    <mat-list-item (click)="goTo('/search')">
         <mat-icon mat-list-icon>search</mat-icon>
         <span>Search Codes</span>
     </mat-list-item>
 
-    <mat-list-item>
+    <mat-list-item (click)="goTo('/users')">
         <mat-icon mat-list-icon>people</mat-icon>
         <span>Users</span>
     </mat-list-item>
 
-    <mat-list-item>
+    <mat-list-item (click)="goTo('/favorites')">
         <mat-icon mat-list-icon>favorite</mat-icon>
         <span>Favorites</span>
     </mat-list-item>
 
-    <mat-list-item>
+    <mat-list-item (click)="goTo('/references')">
         <mat-icon mat-list-icon>folder</mat-icon>
         <span>References</span>
     </mat-list-item>
@@ -46,10 +46,8 @@
         <span>Change Password</span>
     </mat-list-item>
 
-    <mat-list-item>
-        <a routerLink="/login">
-            <mat-icon mat-list-icon>exit_to_app</mat-icon>
-            <span>Logout</span>
-        </a>
+    <mat-list-item (click)="goTo('/login')">
+        <mat-icon mat-list-icon>exit_to_app</mat-icon>
+        <span>Logout</span>
     </mat-list-item>
 </mat-list>

@@ -7,8 +7,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LoginModule } from './login/login.module';
 import { HomeModule } from './home/home.module';
+import { SearchModule } from './search/search.module';
+import { UsersModule } from './users/users.module';
+import { FavoritesModule } from './favorites/favorites.module';
+import { ReferencesModule } from './references/references.module';
 import {
   HeaderComponent,
+  FooterComponent,
+  SideComponent,
   MaterialModule,
   SharedModule
 } from './shared';
@@ -19,14 +25,20 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: fal
   declarations: [
     AppComponent,
     HeaderComponent,
+    FooterComponent,
+    SideComponent
   ],
   imports: [
     rootRouting,
     BrowserModule,
     BrowserAnimationsModule,
-    HomeModule,
+    MaterialModule,
     LoginModule,
-    MaterialModule
+    HomeModule,
+    UsersModule,
+    FavoritesModule,
+    ReferencesModule,
+    SearchModule
   ],
   providers: [],
   bootstrap: [AppComponent]

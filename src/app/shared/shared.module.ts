@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { MaterialModule } from './material.module';
-import { SideComponent } from './layout'
 
 @NgModule({
     imports: [
@@ -17,7 +16,6 @@ import { SideComponent } from './layout'
         RouterModule,
     ],
     declarations: [
-        SideComponent
     ],
     exports: [
         CommonModule,
@@ -26,7 +24,6 @@ import { SideComponent } from './layout'
         MaterialModule,
         ReactiveFormsModule,
         RouterModule,
-        SideComponent
     ]
 })
 export class SharedModule {}

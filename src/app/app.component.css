@@ -1,0 +1,21 @@
+mat-sidenav {
+    width: 25%;
+    min-width: 200px;
+    max-width: 300px;
+}
+mat-sidenav-container {
+    height: 100%;
+}
+mat-sidenav {
+    box-shadow: rgba(0,0,0,0.1) 1px 0 3px;
+    height: calc(100vh - 64px);
+}
+mat-sidenav-content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 64px);
+}
+
+layout-footer {
+    margin-top: auto;
+}

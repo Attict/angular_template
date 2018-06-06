@@ -42,12 +42,17 @@ export class LoginComponent implements OnInit {
 
     /// Login
     signIn(): void {
-        this.processing = true;
-        // TEMP: after 5 seconds goto index
-        // && remove .processing and hide loader
-        setTimeout(() => {
-            this.router.navigate(['/home']);
-        }, 3000);
+        var username = this.loginForm.value.username;
+        var password = this.loginForm.value.password;
+
+        if (username === "administrator" && password === "password") {
+            this.processing = true;
+            // TEMP: after 5 seconds goto index
+            // && remove .processing and hide loader
+            setTimeout(() => {
+                this.router.navigate(['/home']);
+            }, 3000);
+        }
     }
 
     /// Show EULA dialog

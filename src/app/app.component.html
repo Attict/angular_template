@@ -1,2 +1,14 @@
 <layout-header></layout-header>
-<router-outlet></router-outlet>
+
+<mat-sidenav-container>
+    <mat-sidenav mode="side" [opened]="isAuthenticated()">
+        <layout-side></layout-side>
+    </mat-sidenav>
+    <mat-sidenav-content>
+
+        <router-outlet></router-outlet>
+
+        <layout-footer [hidden]="!isAuthenticated()"></layout-footer>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>

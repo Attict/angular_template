@@ -1,5 +1,14 @@
 <mat-toolbar color="primary">
     <div class="toolbar-title">I/O Surg</div>
+
+    <button class="toolbar-year" mat-button [matMenuTriggerFor]="menu">
+        2018 <mat-icon>keyboard_arrow_down</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>2018</button>
+      <button mat-menu-item>2017</button>
+    </mat-menu>
+
     <div class="toolbar-spacer"></div>
     <div class="toolbar-logo"></div>
 </mat-toolbar>

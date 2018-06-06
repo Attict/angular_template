@@ -1,0 +1,41 @@
+<div class="search">
+    <div class="search--container">
+        <mat-icon>search</mat-icon>
+        <input placeholder="Search References" />
+        <mat-icon>refresh</mat-icon>
+    </div>
+</div>
+
+<div class="references-title">
+    <h2>References</h2>
+    <ul>
+        <li><mat-icon matTooltip="Show All">view_list</mat-icon></li>
+        <li><mat-icon matTooltip="News">speaker_notes</mat-icon></li>
+        <li><mat-icon matTooltip="Resources">assignment</mat-icon></li>
+    </ul>
+</div>
+
+<div class="references-list">
+    <mat-card *ngFor="let ref of refs">
+        <mat-card-header>
+            <mat-icon mat-card-avatar>speaker_notes</mat-icon>
+            <mat-card-title>Title Here</mat-card-title>
+            <mat-card-subtitle>August 7, 1992</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer volutpat dui ac nisi gravida consectetur. Nullam velit urna, varius non ligula in, bibendum aliquam ipsum. Maecenas in sapien eleifend, aliquam massa a, viverra est. Aenean dictum tellus ipsum, sit amet rhoncus eros tristique ut. In hac habitasse platea dictumst. In dapibus urna lorem, euismod auctor mi vehicula quis. Integer feugiat quis leo vitae blandit. Donec tristique aliquam fringilla. Ut vel convallis tellus. Proin accumsan, nunc nec ultricies mattis, magna est tempus felis, et efficitur nisi ligula ac lacus. Vivamus lacinia vel elit quis posuere. Praesent sit amet erat non justo convallis eleifend vel semper libero. Integer leo lorem, pharetra ut scelerisque ut, venenatis sit amet nibh. Sed non vestibulum ante, at dignissim purus.
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button>Read More</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+
+<div class="reference-pagination">
+    <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]">
+    </mat-paginator>
+</div>

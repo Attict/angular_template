@@ -1,0 +1,29 @@
+.search-input {
+    align-items: center;
+    background: #c4c4c4;
+    box-sizing: border-box;
+    justify-content: center;
+    display: flex;
+    height: 50px;
+    padding: 0 10px 0 0;
+    width: 100%;
+}
+
+.search-input--container {
+    align-items: center;
+    background: #ffffff;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 1 40%;
+    height: 35px;
+    margin: 0 0 0 10px;
+    padding: 0 5px;
+}
+.search-input input {
+    background: none;
+    border: none;
+    flex: 1 1 auto;
+    font: normal 300 1em/35px Montserrat, "Helvetica Neue", sans-serif;
+    outline: none;
+}

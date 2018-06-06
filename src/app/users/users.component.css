@@ -1,0 +1,15 @@
+.users {
+    padding: 25px;
+}
+.users-filter mat-form-field {
+    width: 100%;
+}
+
+mat-header-cell,
+mat-cell {
+    padding: 5px;
+}
+
+.mat-column-id {
+
+}
