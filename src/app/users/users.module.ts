@@ -1,8 +1,9 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { UsersComponent } from './users.component';
 import { SharedModule } from '../shared';
+import { UsersComponent } from './users.component';
+import { EditUserDialog } from './edit-user.dialog';
 
 const usersRouting: ModuleWithProviders = RouterModule.forChild([
     {
@@ -17,7 +18,11 @@ const usersRouting: ModuleWithProviders = RouterModule.forChild([
         SharedModule,
     ],
     declarations: [
-        UsersComponent
+        UsersComponent,
+        EditUserDialog
+    ],
+    entryComponents: [
+        EditUserDialog
     ]
 })
 export class UsersModule {}

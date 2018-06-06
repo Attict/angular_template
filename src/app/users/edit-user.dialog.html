@@ -1,0 +1,33 @@
+<mat-toolbar color="primary">
+    <h1 mat-dialog-title>Edit User</h1>
+</mat-toolbar>
+<div mat-dialog-content>
+    <mat-form-field>
+        <input matInput [(ngModel)]="data.user.username" placeholder="Username" />
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput [(ngModel)]="data.user.name" placeholder="Name" />
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput [(ngModel)]="data.user.email" placeholder="Email" />
+    </mat-form-field>
+
+    <mat-checkbox (click)="togglePassword()">Password Reset?</mat-checkbox>
+    <mat-checkbox [checked]="data.user.active">Active</mat-checkbox>
+
+    <div [hidden]="!showPassword">
+        <mat-form-field>
+            <input matInput type="password" placeholder="Password" />
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput type="password" placeholder="Confirm Password" />
+        </mat-form-field>
+    </div>
+</div>
+<div mat-dialog-actions>
+    <button mat-button color="warn" [mat-dialog-close]="">Cancel</button>
+    <button mat-raised-button color="primary" (click)="save()">Save</button>
+</div>

@@ -1,6 +1,7 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
-import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
+import { MatTableDataSource, MatPaginator, MatSort, MatDialog } from '@angular/material';
 import { SharedModule, User } from '../shared';
+import { EditUserDialog } from './edit-user.dialog';
 
 @Component({
     selector: 'users',
@@ -16,11 +17,14 @@ export class UsersComponent implements OnInit {
     @ViewChild(MatSort) sort: MatSort;
 
 
-    constructor() {
+    constructor(
+        public dialog: MatDialog
+    ) {
         // Create `TEMP` users
         for (let i = 0; i < 100; i++) {
             let user = {} as User;
             user.username = "Username " + i;
+            user.email = "Email " + i;
             user.group = "User";
             if (i % 5 == 0 || i % 6 == 0) {
                 user.group = "Administrator";
@@ -28,6 +32,7 @@ export class UsersComponent implements OnInit {
             user.lastOnline = "08-04-2013 at 2:09 PM";
             user.name = "Fname Lname";
             user.options = "Delete";
+            user.active = true;
 
             this.users.push(user);
         }
@@ -47,8 +52,13 @@ export class UsersComponent implements OnInit {
         this.dataSource.filter = filterValue; 
     }
 
-    editUser(): void {
-
+    editUser(user: User): void {
+        let editDialog = this.dialog.open(EditUserDialog, {
+            width: '500px',
+            data: {
+                user: user 
+            }
+        });
     }
 
 

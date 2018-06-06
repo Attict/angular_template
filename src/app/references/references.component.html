@@ -16,10 +16,10 @@
 </div>
 
 <div class="references-list">
-    <mat-card *ngFor="let ref of refs">
+    <mat-card *ngFor="let ref of refs | async">
         <mat-card-header>
-            <mat-icon mat-card-avatar>speaker_notes</mat-icon>
-            <mat-card-title>Title Here</mat-card-title>
+            <mat-icon color="accent" mat-card-avatar>speaker_notes</mat-icon>
+            <mat-card-title>{{ ref.title }}</mat-card-title>
             <mat-card-subtitle>August 7, 1992</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
@@ -35,7 +35,7 @@
 
 <div class="reference-pagination">
     <mat-paginator [length]="100"
-              [pageSize]="10"
+              [pageSize]="5"
               [pageSizeOptions]="[5, 10, 25, 100]">
     </mat-paginator>
 </div>

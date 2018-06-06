@@ -58,7 +58,7 @@ export class LoginComponent implements OnInit {
     /// Show EULA dialog
     openEula(): void {
         let dialogRef = this.dialog.open(EulaDialog, {
-            height: '800px',
+            height: '600px',
             width: '90%',
             data: {
             }
