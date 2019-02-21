@@ -12,20 +12,20 @@ export class HeaderComponent implements OnInit {
 
     constructor() {}
     ngOnInit() {
-        this.theme = "kapios-theme--light"; 
+        this.theme = "theme-light"; 
     }
 
     setTheme(id: number): void {
         localStorage.setItem('themeId', id.toString());
         switch (id) {
             case 1: {
-                this.theme = "kapios-theme--dark";  
+                this.theme = "theme-dark";  
                 this.themer.nativeElement.classList.remove("toolbar-themer--light");
                 this.themer.nativeElement.classList.add("toolbar-themer--dark");
                 break;
             } 
             default: {
-                this.theme = "kapios-theme--light";
+                this.theme = "theme-light";
                 this.themer.nativeElement.classList.remove("toolbar-themer--dark");
                 this.themer.nativeElement.classList.add("toolbar-themer--light");
                 break;

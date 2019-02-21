@@ -6,7 +6,7 @@
 // **Be sure that you only ever include this mixin once!**
 @include mat-core();
 
-$kapios-blue: (
+$theme-blue: (
     50: #abe8ff,
     100: #78b6d9,
     200: #4586a7,
@@ -40,26 +40,26 @@ $kapios-blue: (
 );
 
 // Define the default theme (same as the example above).
-$kapios-light-primary: mat-palette($kapios-blue, 500, 300, 700);
-$kapios-light-accent:  mat-palette($mat-pink, A200, A100, A400);
-$kapios-light-warn:    mat-palette($mat-red);
-$kapios-light-theme:   mat-light-theme($kapios-light-primary, $kapios-light-accent, $kapios-light-warn);
+$theme-light-primary: mat-palette($theme-blue, 500, 300, 700);
+$theme-light-accent:  mat-palette($mat-pink, A200, A100, A400);
+$theme-light-warn:    mat-palette($mat-red);
+$theme-light-theme:   mat-light-theme($theme-light-primary, $theme-light-accent, $theme-light-warn);
 
 // Include the default theme styles.
-.kapios-theme--light {
-    @include angular-material-theme($kapios-light-theme);
+.theme-light {
+    @include angular-material-theme($theme-light-theme);
 }
 
 
 // Define an alternate dark theme.
-$kapios-dark-primary: mat-palette($kapios-blue, 100, 50, 300);
-$kapios-dark-accent:  mat-palette($mat-pink, A200, A100, A400);
-$kapios-dark-warn:    mat-palette($mat-red);
-$kapios-dark-theme:   mat-dark-theme($kapios-dark-primary, $kapios-dark-accent, $kapios-dark-warn);
+$theme-dark-primary: mat-palette($theme-blue, 100, 50, 300);
+$theme-dark-accent:  mat-palette($mat-pink, A200, A100, A400);
+$theme-dark-warn:    mat-palette($mat-red);
+$theme-dark-theme:   mat-dark-theme($theme-dark-primary, $theme-dark-accent, $theme-dark-warn);
 
 // Include the alternative theme styles inside of a block with a CSS class. You can make this
 // CSS class whatever you want. In this example, any component inside of an element with
 // `.unicorn-dark-theme` will be affected by this alternate dark theme instead of the default theme.
-.kapios-theme--dark {
-  @include angular-material-theme($kapios-dark-theme);
+.theme-dark {
+  @include angular-material-theme($theme-dark-theme);
 }

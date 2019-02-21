@@ -62,7 +62,7 @@ ul {
     flex: 1 1 auto;
 }
 .toolbar-logo {
-    background: url('/assets/kapios/bug_reverse.png') no-repeat center;
+    background: url('/currently/unavailable') no-repeat center;
     background-size: 40px 40px;
     height: 100%;
     width: 50px;
@@ -90,10 +90,10 @@ ul {
 }
 
 
-.kapios-theme--light .side-user {
+.theme-light .side-user {
     background: #f4f4f4;
 }
-.kapios-theme--dark .side-user {
+.theme-dark .side-user {
     background: #525252;
 }
 
@@ -107,10 +107,10 @@ ul {
     cursor: pointer;
     transition: background 0.25s ease;
 }
-.kapios-theme--light .side-menu mat-list-item:hover {
+.theme-light .side-menu mat-list-item:hover {
     background: #e4e4e4;
 }
-.kapios-theme--dark .side-menu mat-list-item:hover {
+.theme-dark .side-menu mat-list-item:hover {
     background: #626262;
 }
 
@@ -125,9 +125,9 @@ ul {
     line-height: 40px;
     text-align: center;
 }
-.kapios-theme--light .footer {
+.theme-light .footer {
     background: #d4d4d4;
 }
-.kapios-theme--dark .footer {
+.theme-dark .footer {
     background: #4f4f4f;
 }

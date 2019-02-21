@@ -20,11 +20,11 @@ export class AppComponent implements OnInit {
     ngOnInit(): void {
         var themeId = localStorage.getItem('themeId');
         if (+themeId === 1) {
-            this.wrapper.nativeElement.className = "kapios-theme--dark";
-            this.overlayContainer.getContainerElement().classList.add("kapios-theme--dark");
+            this.wrapper.nativeElement.className = "theme-dark";
+            this.overlayContainer.getContainerElement().classList.add("theme-dark");
         } else {
-            this.wrapper.nativeElement.className = "kapios-theme--light";
-            this.overlayContainer.getContainerElement().classList.add("kapios-theme--light");
+            this.wrapper.nativeElement.className = "theme-light";
+            this.overlayContainer.getContainerElement().classList.add("theme-light");
         }
 
     }

@@ -20,7 +20,7 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "kapios.scss"
+        "theme.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
